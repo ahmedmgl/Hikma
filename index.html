@@ -15,24 +15,19 @@
             const randomVerse = randomSura.verses[Math.floor(Math.random() * randomSura.verses.length)];
 
             document.getElementById('sura-name').innerText = randomSura.name;
-            document.getElementById('verse-number').innerText = randomVerse.id;
-            document.getElementById('verse-text-fr').innerText = randomVerse.translation;
-            document.getElementById('verse-text-ar').innerText = randomVerse.text;
+            document.getElementById('verse-number').innerText = randomVerse.verse;
+            document.getElementById('verse-text').innerText = randomVerse.text;
         }
 
         window.onload = getRandomVerse;
     </script>
 </head>
 <body>
-    <div id="content">
-        <h1>Hikma</h1>
-        <p><strong>Sourate:</strong> <span id="sura-name"></span></p>
-        <p><strong>Verset <span id="verse-number"></span>:</strong> <span id="verse-text-fr"></span></p>
-        <p class="arabic"><span id="verse-text-ar"></span></p>
-        
-        <footer>
-            <p>Généré aléatoirement depuis le Coran. <a href="#">Rafraîchir</a> pour un autre verset.</p>
-        </footer>
-    </div>
+    <h1>Hikma</h1>
+    <p><strong>Sourate:</strong> <span id="sura-name"></span></p>
+    <p><strong>Verset <span id="verse-number"></span>:</strong> <span id="verse-text"></span></p>
+    <footer>
+        <p>Généré aléatoirement depuis le Coran. <a href="#">Rafraîchir</a> pour un autre verset.</p>
+    </footer>
 </body>
 </html>
