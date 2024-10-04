@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verset Aléatoire du Coran</title>
+    <link rel="stylesheet" href="style.css">
     <script>
         async function getRandomVerse() {
-            // Charger le fichier JSON contenant les versets
-            const response = await fetch('quran_fr_only.json'); // Le fichier JSON doit être hébergé dans le même dépôt
+            const response = await fetch('quran_fr_only.json');
             const data = await response.json();
 
-            // Sélectionner une sourate et un verset aléatoire
             const randomSura = data[Math.floor(Math.random() * data.length)];
             const randomVerse = randomSura.verses[Math.floor(Math.random() * randomSura.verses.length)];
 
-            // Afficher le verset et la sourate
             document.getElementById('sura-name').innerText = randomSura.name;
             document.getElementById('verse-number').innerText = randomVerse.verse;
             document.getElementById('verse-text').innerText = randomVerse.text;
@@ -27,5 +25,8 @@
     <h1>Verset Aléatoire du Coran</h1>
     <p><strong>Sourate:</strong> <span id="sura-name"></span></p>
     <p><strong>Verset <span id="verse-number"></span>:</strong> <span id="verse-text"></span></p>
+    <footer>
+        <p>Généré aléatoirement depuis le Coran. <a href="#">Rafraîchir</a> pour un autre verset.</p>
+    </footer>
 </body>
 </html>
