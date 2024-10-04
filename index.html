@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verset Aléatoire du Coran</title>
+    <title>Hikma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-
     <script>
         async function getRandomVerse() {
             const response = await fetch('quran_fr_only.json');
@@ -23,7 +23,7 @@
     </script>
 </head>
 <body>
-    <h1>Verset Aléatoire du Coran</h1>
+    <h1>Hikma</h1>
     <p><strong>Sourate:</strong> <span id="sura-name"></span></p>
     <p><strong>Verset <span id="verse-number"></span>:</strong> <span id="verse-text"></span></p>
     <footer>
