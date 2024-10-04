@@ -15,10 +15,11 @@ body {
 
 /* Style du titre */
 h1 {
-    color: #ff6f61; /* Titre en rouge pour attirer l'attention */
-    font-size: 2.5em;
+    font-family: 'Amiri', serif;  /* Police Amiri avec un style arabe */
+    color: #ffffff;  /* Titre en blanc */
+    font-size: 3em;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    text-transform: none;  /* Pas de majuscules automatiques */
 }
 
 /* Style des paragraphes */
