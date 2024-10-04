@@ -15,19 +15,30 @@
             const randomVerse = randomSura.verses[Math.floor(Math.random() * randomSura.verses.length)];
 
             document.getElementById('sura-name').innerText = randomSura.name;
-            document.getElementById('verse-number').innerText = randomVerse.verse;
-            document.getElementById('verse-text').innerText = randomVerse.text;
+            document.getElementById('verse-number').innerText = randomVerse.id;
+            document.getElementById('verse-text-fr').innerText = randomVerse.translation;
+            document.getElementById('verse-text-ar').innerText = randomVerse.text;
         }
 
         window.onload = getRandomVerse;
     </script>
 </head>
 <body>
-    <h1>Hikma</h1>
-    <p><strong>Sourate:</strong> <span id="sura-name"></span></p>
-    <p><strong>Verset <span id="verse-number"></span>:</strong> <span id="verse-text"></span></p>
-    <footer>
-        <p>Généré aléatoirement depuis le Coran. <a href="#">Rafraîchir</a> pour un autre verset.</p>
-    </footer>
+    <!-- L'iframe de la vidéo YouTube en arrière-plan -->
+    <div id="video-background">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kT-f2mfNL7s?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&autohide=1&playlist=kT-f2mfNL7s" frameborder="0" allow="autoplay; fullscreen"></iframe>
+    </div>
+    
+    <!-- Le contenu par-dessus la vidéo -->
+    <div id="content">
+        <h1>Hikma</h1>
+        <p><strong>Sourate:</strong> <span id="sura-name"></span></p>
+        <p><strong>Verset <span id="verse-number"></span>:</strong> <span id="verse-text-fr"></span></p>
+        <p class="arabic"><span id="verse-text-ar"></span></p>
+        
+        <footer>
+            <p>Généré aléatoirement depuis le Coran. <a href="#">Rafraîchir</a> pour un autre verset.</p>
+        </footer>
+    </div>
 </body>
 </html>
