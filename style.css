@@ -1,27 +1,35 @@
-/* Style de base */
+/* Style global */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    text-align: center;
+    background-color: #121212;  /* Fond noir */
+    color: #e0e0e0;  /* Texte blanc cassé */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
 }
 
+/* Style du titre */
 h1 {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px;
-    margin-bottom: 30px;
+    color: #ff6f61; /* Titre en rouge pour attirer l'attention */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
+/* Style des paragraphes */
 p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin: 10px;
 }
 
+/* Couleurs accentuées pour les éléments importants */
 strong {
-    color: #007bff;
+    color: #03dac6; /* Accent turquoise */
 }
 
 #sura-name, #verse-number, #verse-text {
@@ -29,18 +37,25 @@ strong {
     margin-top: 15px;
 }
 
+/* Style du numéro de verset */
 #verse-number {
     font-weight: bold;
-    color: #ff4500;
+    color: #bb86fc;  /* Violet léger */
 }
 
+/* Style du footer */
 footer {
     margin-top: 40px;
     font-size: 0.9em;
-    color: #777;
+    color: #888;
 }
 
 footer a {
-    color: #007bff;
+    color: #03dac6;  /* Accent turquoise pour les liens */
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff6f61;  /* Changement de couleur au survol */
 }
