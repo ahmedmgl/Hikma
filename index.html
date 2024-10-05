@@ -47,7 +47,7 @@
     <script>
         async function getRandomVerse() {
             try {
-                const response = await fetch('quran_fr.json');
+                const response = await fetch('quran_fr_only.json');
 
                 if (!response.ok) {
                     throw new Error('Erreur lors du chargement du fichier JSON');
