@@ -1,62 +1,63 @@
-/* Style global */
+/* Style de base */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;  /* Fond noir */
-    color: #e0e0e0;  /* Texte blanc cassé */
+    background-color: #0f0f0f;
+    color: #eee;
+    text-align: center;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
 }
 
-/* Style du titre */
-h1 {
-    font-family: 'Amiri', serif;  /* Police Amiri avec un style arabe */
-    color: #ffffff;  /* Titre en blanc */
+/* Nom du site "Hikma" */
+#site-name {
+    font-family: 'Cairo', sans-serif;
     font-size: 3em;
-    margin-bottom: 20px;
-    text-transform: none;  /* Pas de majuscules automatiques */
-}
-
-/* Style des paragraphes */
-p {
-    font-size: 1.4em;
-    margin: 10px;
-}
-
-/* Couleurs accentuées pour les éléments importants */
-strong {
-    color: #03dac6; /* Accent turquoise */
-}
-
-#sura-name, #verse-number, #verse-text {
-    display: inline-block;
-    margin-top: 15px;
-}
-
-/* Style du numéro de verset */
-#verse-number {
     font-weight: bold;
-    color: #bb86fc;  /* Violet léger */
+    color: white;
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Style du footer */
-footer {
+/* Styles pour les versets */
+.verse-box {
     margin-top: 40px;
-    font-size: 0.9em;
-    color: #888;
+    padding: 20px;
+    background-color: #222;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.verse-number {
+    font-size: 1.5em;
+    color: #ff1744;
+}
+
+.sura-name {
+    font-size: 1.2em;
+    color: #00bcd4;
+}
+
+.verse-text-ar {
+    font-size: 2em;
+    color: #fff;
+    margin: 20px 0;
+    direction: rtl;
+    font-family: 'Amiri', serif;
+}
+
+.verse-text-fr {
+    font-size: 1.2em;
+    color: #eee;
+    margin-top: 20px;
+}
+
+/* Pied de page */
+footer {
+    margin-top: 50px;
+    color: #aaa;
 }
 
 footer a {
-    color: #03dac6;  /* Accent turquoise pour les liens */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ff6f61;  /* Changement de couleur au survol */
+    color: #00bcd4;
 }
